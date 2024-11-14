@@ -1,0 +1,11 @@
+const login = require("../controller/login");
+const signup = require("../controller/signup");
+const update = require("../controller/update");
+const dlt = require("../controller/delete");
+const express = require("express");
+const userRouter = express();
+userRouter.post("/signup", signup);
+userRouter.post("/login", login);
+userRouter.put("/update", update);
+userRouter.delete("/delete", dlt);
+module.exports = userRouter;
